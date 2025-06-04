@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Diet Plan Web Site</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+    <!--Navbar-->
+    <header>
+        <a href="#" class="logo">
+            <img src="img1.png" alt="">
+            <p>NutrtFit</p>
+        </a>
+        <!--Munu Icon-->
+        <i class="bx bx-menu" id="menu-icon"></i>
+        <!--Links-->
+        <ul class="navbar">
+            <li><a href="#home">Home</a> </li>
+            <li><a href="#bmi">BMI Calculator</a> </li>
+            <li><a href="#plan">Diet Plan</a> </li>
+            <li><a href="#about">About Us</a> </li>
+            <li><a href="#reviews">Reviews</a> </li>
+        </ul>
+        <!--Icons-->
+        <div class="header-icon" >
+        <i class="bx bx-search-alt-2" id="search-icon"></i>
+        </div>
+        <!--Search Box-->
+        <div class="search-box">
+            <input type="search" placeholder="Search Here..........">
+        </div>
+
+    </header>
+    <!--Home-->
+    <section class="home" id="home">
+        <div class="home-text">
+            <h1>Get active and be a <br>healthy weight</h1>
+            <p>Staying active is important for keeping a healthy weight and feeling good. Regular exercise, 
+                like walking or cycling, helps burn calories, build muscle, and improve energy. Along with exercise, 
+                eating a balanced diet of fruits, vegetables, lean proteins, and whole grains supports weight control. 
+                Aiming for about 150 minutes of activity each week is a great goal to start with. 
+                By staying consistent with exercise and healthy eating, you can improve your overall health and prevent many diseases.</p>
+                <p>Follow this order until you can achiw healthy weight.</p>
+                <p><a href="#bmi" class="btn">Step 01</a> ----> Calculate BMI value.</p>
+                <p><a href="#plan" class="btn">Step 02</a> ----> View diet plan according to your category.</p>     
+        </div>
+        <div class="home-img">
+            <img src="img2.webp" alt="">
+        </div>
+    </section>
+    <!--BMI Calculator-->
+    <section class="bmi" id="bmi">
+       
+        <div class="container">
+            <h1>BMI Calculator</h1>
+            <div class="bmi-calculator">
+                <label for="units">Select Unit System:</label>
+                <select id="units" onchange="toggleUnits()">
+                    <option value="metric">Metric (kg, cm)</option>
+                    <option value="imperial">Imperial (lbs, inches)</option>
+                </select>
+    
+                <div class="input-group">
+                    <label for="weight">Weight:</label>
+                    <input type="number" id="weight" placeholder="Enter your weight" step="any" required>
+                    <span id="weight-unit">kg</span>
+                </div>
+    
+                <div class="input-group">
+                    <label for="height">Height:</label>
+                    <input type="number" id="height" placeholder="Enter your height" step="any" required>
+                    <span id="height-unit">cm</span>
+                </div>
+    
+                <div class="input-group">
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" placeholder="Enter your age" required>
+                </div>
+    
+                <div class="input-group">
+                    <label for="gender">Gender:</label>
+                    <select id="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+    
+                <button onclick="calculateBMI()">Calculate BMI</button>
+                <button onclick="clearForm()">Clear</button>
+    
+                <div class="results">
+                    <p id="bmi-result">Your BMI: --</p>
+                    <p id="bmi-category">Category: --</p>
+                    <p id="health-risk">Health Risk: --</p>
+                </div>
+            </div>
+        </div>
+        <div class="bmi-img">
+            <img src="img3.jpg" alt="">
+        </div>
+
+    </section>
+    <!--Diet plan-->
+    <section class="plan" id="plan" >
+        <div class="plan-container">
+            <h1>Diet & Exercise Plans</h1>
+            <ul class="diet">
+                <p>Select Your category</p>
+                <li><a href="#under">Underweight</a> </li>
+                <li><a href="#normal">Normal Weight</a> </li>
+                <li><a href="#over">Overweight</a> </li>
+                <li><a href="#ClassI ">Obesity Class I (BMI 30-34.9)</a> </li>
+                <li><a href="#ClassII">Obesity Class II (BMI 35-39.9)</a> </li>
+                <li><a href="#ClassIII">Obesity Class III (BMI 40+)</a> </li>
+            </ul>
+
+            
+                <div id="under">
+                    <h2>Underweight</h2>
+                    <div>
+                    <h3>Diet Plan</h3>
+                        <p>High-caloric Intake: Frequently take in calorie-dense food such as nuts, seeds, avocados, and whole grains.<br>
+                        Protein-based Foods: Lean meats, dairy, eggs, and legumes.<br>
+                        Healthy Fats: Include olive oil, nut butters, and fatty fish.<br>
+                        Smoothies and Shakes: Add extra calories by blending fruits, vegetables, and protein powder.<br>
+                        Snacking: Trail mix, cheese, and dried fruits are equally good.</p>
+                        <h3>Exercise Plan </h3>
+                        <p>Strength Training: Do simple weight training to build up your muscles. Do it 3-4 times in a week.<br>
+                        Cardio: Light cardio such as walking or cycling 20-30 minutes, 2-3 times a week.<br>
+                        Flexibility Exercises: Improve flexibility and prevent injuries by doing yoga or stretching.</p>
+                        </div>
+                </div>
+                <div id="normal">
+                    <h2>Normal Weight</h2>
+                
+                <div>
+                    <h3>Diet Plan</h3>
+                        <p>Balanced Diet: A balanced diet comprising fruits, vegetables, whole grains, lean proteins, and healthy fats.<br>
+                        Portion Control: Let the portions be in check to avoid excess intake.<br>
+                        Hydration: Ingestion of adequate water, avoiding sweetened drinks.<br>
+                        Frequency of Meals: Take your meals and snacks regularly to maintain your energy level.</p>
+                        <h3>Exercise Plan </h3>
+                        <p>Cardio: 150 minutes of moderate-intensity cardio in a week. For example, speed walking or swimming.<br>
+                        Muscle Resistance Training: Exercise 2-3 times a week to maintain muscle mass.<br>
+                        Flexibility and Balance: Do yoga once a week.</p>
+                </div>
+                </div>
+                <div id="over">
+                    <h2>Overweight</h2>
+                
+                <div>
+                    <h3>Diet Plan</h3>
+                        <p>Caloric Intake: The overall caloric intake needs to be reduced, with a focus on nutrient-dense foods.<br>
+                        High Fiber Foods: This adds vegetables, fruits, and whole grains to keep the feeling of fullness for a longer period.<br>
+                        Lean Proteins: Lean meats, fish, beans, and legumes.<br>
+                        Healthy Fats: To be used with olive oil, nuts, and seeds in moderation.<br>
+                        Limit Sugars and Refined Carbs: Avoid sugary drinks, sweets, and processed foods.</p>
+                        <h3>Exercise Plan </h3>
+                        <p>Cardio: 150-300 minutes of moderate-intensity cardio per week.
+                        It also contributes to muscular building, increasing metabolism.<br>
+                         hence, it is recommended 2-3 sessions per week. <br>
+                        Flexibility and Balance: Do yoga to enhance flexibility.</p>
+                </div>
+                </div>
+                <div id="ClassI">
+                    <h2>Obesity Class I (BMI 30-34.9)</h2>
+                
+                <div>
+                    <h3>Diet Plan</h3>
+                    <p>Caloric Deficit: Creating a caloric deficit will generally set an environment for weight loss.<br>
+                    Plant-Based Foods: The emphasis should be on fruits, vegetables, whole grains.<br> 
+                    Lean Proteins: You can add beans, lentils, lean meats.</br>   
+                    Healthy Fats: Avocado-containing foods, nuts, and olive oil-infused foods can be used.<br>
+                    Limit Processed Foods: Limit foods with more calories than nutrients.</p>
+                    <h3>Exercise Plan </h3>
+                    <p>Cardio: 150-300 minutes of moderate-intensity cardio per week<br>
+                    Strength Training: 2-3 times a week to build muscle.<br>
+                    Flexibility and Balance: Do flexibility and balance exercises like yoga.</p>      
+                </div>
+                </div>
+                <div id="ClassII">
+                    <h2>Obesity Class II (BMI 35-39.9)</h2>
+                
+                <div>
+                    <h3>Diet Plan</h3>
+                    <p>Meal Plan: Eat a controlled portion size meal in a structured plan.<br>
+                    High-Fiber Foods: Vegetables, fruits, and whole grains should be emphasized.<br> 
+                    Protein foods: This includes lean meats, such as chicken, fish, and legumes.<br>   
+                    Healthy Fats: Nuts, seeds, and olive oil are usable.<br>
+                    Limit your intake to sweets, sugary drinks, and refined carbohydrates.</p>
+                    <h3>Exercise Plan </h3>
+                    <p>Cardio: 150-300 minutes of moderate-intensity cardio every week.<br>
+                    Muscle Workouts: It is recommended to do strength training 2 to 3 times a week for muscle development.<br>
+                    Flexibility and Balance: Add stretching or yoga to help improve flexibility.</p>      
+                </div>
+                </div>
+                <div id="ClassIII">
+                    <h2>Obesity Class III (BMI 40+)</h2>
+                
+                <div>
+                    <h3>Diet Plan</h3>
+                    <p>Medical Oversight: Working with a doctor to come up with the best diet for you.<br>
+                    Low-Calorie, High-Nutrient Foods: Make sure that your diet focuses more on vegetables, fruits, and lean proteins.<br> 
+                    Meal Replacement: Using meal replacement shakes or bars-one may need to use these under a doctor's care.<br>   
+                    Healthy Fat Sources: Include nuts, seeds, and avocados in your diet.<br>
+                    Frequent Follow-Up: Periodically check on progress and adjust the diet as necessary.</p>
+                    <h3>Exercise Plan </h3>
+                    <p>Cardio: The low-impact cardio exercise, which could be walking or swimming, should be increased in time and intensity over time.<br>
+                    Strength Training: 2-3 times a week with a focus on bodyweight exercises or light weights.<br>
+                    Flexibility and Balance: Do yoga to help improve flexibility.</p>      
+                </div>
+                </div>
+            
+          </div>
+    </section>
+    
+    <!--About-->
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="img4.jpeg" alt="">
+        </div>
+        <div class="about-text">
+            <h2>Our History</h2>
+            <p>NutrtFit began in 2021 with a simple goal: to help people live healthier lives with clear, expert advice. 
+                A small team of nutritionists and fitness enthusiasts saw the confusion around health 
+                and diets and wanted to provide trustworthy guidance.</p>
+                <p>At first, we helped friends and family by creating personalized diet and fitness plans. 
+                    As word spread, more people came to us for support, which led to the launch of NutrtFit.</p>
+                <p>Our community grew quickly, and by 2023, we had a team of certified nutritionists, dieticians, 
+                   and fitness coaches. We focused on offering personalized plans for weight management and healthy living.</p>
+                <p>Over time, we expanded our services to include a wide range of diet plans, nutrition tips, and fitness programs.
+                We've now helped thousands of people reach their health goals in a sustainable and enjoyable way.</p>
+                <p>Today, NutrtFit continues to offer expert advice for people at all stages of their health journey. 
+                 Our mission remains to help everyone live a healthier, happier life with personalized, easy-to-follow guidance.</p>
+                    
+                        <a href="#" class="btn">Learn More</a>
+        </div>
+    </section>
+    <!--User Reviews-->
+    <section class="reviews" id="reviews">
+        <div class="heading">
+            <h2>User Reviews</h2>
+        </div>
+        <!--container-->
+        <div class="Custormers-container">
+            <div class="box">
+                <div class="stars">
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star-half' ></i>
+                </div>
+                <p>"I love how personalized everything is on NutrtFit. The tips and meal plans are tailored to my lifestyle,
+                     and I never feel like I’m on a strict diet. I’ve learned how to eat better without feeling restricted."</p>
+                    <h2>Menuji Minethma</h2>
+                    <p>(28 years old)</p>
+                    <img src="img5.webp" alt="">
+            </div>
+
+            <div class="box">
+                <div class="stars">
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star-half' ></i>
+                </div>
+                <p>"I’ve tried so many diet plans over the years, but NutrtFit is the first one that truly worked for me.
+                     The personalized meal plans and easy-to-follow fitness tips made all the difference. 
+                     I feel healthier and more confident than ever!"</p>
+                    <h2>Kansaja Methmal</h2>
+                    <p>(32 years old)</p>
+                    <img src="img6.jpeg" alt="">
+            </div>
+
+            <div class="box">
+                <div class="stars">
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star-half' ></i>
+                </div>
+                <p>"The team at NutrtFit really knows what they’re doing. I struggled with weight gain for years, 
+                    but their advice helped me reach a healthy weight in just a few months. Plus, the recipes are delicious and easy to make!"</p>
+                    <h2>Nithini Nethma</h2>
+                    <p>(45 years old)</p>
+                    <img src="img7.webp" alt="">
+            </div>
+        </div>
+    </section>
+    <!--Footer Section-->
+    <section class="footer">
+        <div class="footer-box">
+            <h3>Diet Plan</h3>
+            <p>For different weight categories, here’s a simple guide: <b>Underweight</b> people should eat more
+                 high-calorie foods and lift weights to build muscle. <b>Normal weight</b> individuals should stick to 
+                 a balanced diet and exercise regularly. <b>Overweight</b> and <b>obese</b> 
+                people should cut calories, eat healthier, and exercise more, with the plan 
+                becoming more specific as their weight increases.</p>
+                <div class="social">
+                    <a href="#" ><i class='bx bxl-facebook'></i></a>
+                    <a href="#"><i class='bx bxl-twitter' ></i></a>
+                    <a href="#"><i class='bx bxl-instagram-alt' ></i></a>
+                    <a href="#"><i class='bx bxl-tiktok' ></i></a>
+                </div>
+        </div>
+        
+        
+        <div class="footer-box">
+            <h3>Contact</h3>
+            <div class="contact">
+                <span><i class='bx bx-map' ></i>68/A, Koongasdeniya, Nittambuwa</span>
+                <span><i class='bx bx-phone-call' ></i>+94 75 145-7692</span>
+                <span><i class='bx bx-envelope' ></i>diet@plan.com</span>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+    
+</body>
+</html>
